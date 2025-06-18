@@ -17,8 +17,8 @@
 
     <EditText
         android:id="@+id/additem"
-        android:layout_width="389dp"
-        android:layout_height="50dp"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
         android:hint="@string/AddItem" />
 
     <Button
