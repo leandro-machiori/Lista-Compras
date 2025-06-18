@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ListaCompras</string>
+    <string name="Adicionar">ADICIONAR</string>
+    <string name="Limpar">LIMPAR LISTA</string>
+    <string name="AddItem">Digite um Item</string>
+    <string name="Total">Total de itens: 0</string>
+</resources>
