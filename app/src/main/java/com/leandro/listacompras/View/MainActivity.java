@@ -13,8 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.leandro.listacompras.Controller.ListaController;
+import com.leandro.listacompras.Model.Item;
 import com.leandro.listacompras.R;
-import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity {
     EditText addItem;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listaItens;
     TextView totalItens;
     ListaController controller;
-    ArrayAdapter<String> adapter;
+    ArrayAdapter<Item> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
