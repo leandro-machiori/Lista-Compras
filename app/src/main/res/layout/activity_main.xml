@@ -1,46 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/sPLASH"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Titulo"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/addItem"
+            android:backgroundTintMode="screen"
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:textColorHint="@color/white"
+            android:hint="@string/AddItem" />
+
+        <EditText
+            android:id="@+id/Preco"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:backgroundTintMode="screen"
+            android:textColorHint="@color/white"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="@string/Valor"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/Adicionar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:text="@string/Adicionar" />
+
+        <Button
+            android:id="@+id/Limpar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple"
+            android:text="@string/Limpar"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/totalItens"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="@string/Total"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
 
-    <EditText
-        android:id="@+id/additem"
-        android:layout_width="380dp"
+    <TextView
+        android:id="@+id/TotalCompra"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
-        android:hint="@string/AddItem" />
+        android:text="@string/ValorTotal"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
 
-    <Button
-        android:id="@+id/Adicionar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/green"
-        android:text="@string/Adicionar"
-        android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/Limpar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/green"
-        android:text="@string/Limpar"
-        android:textColor="@color/black" />
 
     <ListView
         android:id="@+id/listaItens"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_marginTop="16dp" />
+
+
+
 </LinearLayout>
